@@ -1,7 +1,8 @@
 var Engine = Matter.Engine,
-    World = Matter.World,
-    Events = Matter.Events,
-    Bodies = Matter.Bodies; 
+ World = Matter.World,
+ Events = Matter.Events,
+ Bodies = Matter.Bodies; 
+
 var particles = [];
 var plinkos = [];
 var divisions =[];
@@ -44,7 +45,7 @@ function draw() {
   textSize(35)
   text("Score : "+score,20,40);
   fill("white");
-  //text(mouseX + "," + mouseY, 20, 50);
+    
   textSize(35)
   text(" 500 ", 5, 550);
   text(" 500 ", 80, 550);
@@ -59,11 +60,10 @@ function draw() {
   Engine.update(engine);
   ground.display();
   
-  if ( gameState =="end") {
+  if ( gameState ==="end") {
     
     textSize(100);
     text("GameOver", 150, 250);
-    //return
   }
 
   for (var i = 0; i < plinkos.length; i++) {
